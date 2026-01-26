@@ -1,0 +1,92 @@
+/* =========================
+   Base Typography (Scoped)
+   ========================= */
+
+.content {
+	color: #676767; /* gray-700 */
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+.content .container {
+	max-width: 1000px;
+}
+
+a[aria-current='page'] {
+	color: white;
+	background-color: #9fc646;
+}
+a[aria-current='page']:hover {
+	color: white;
+}
+/* Headings */
+.content h1 {
+	font-size: 2.25rem; /* ~text-4xl */
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+}
+
+.content h2 {
+	font-size: 1.875rem; /* ~text-3xl */
+	font-weight: 600;
+	line-height: 1.3;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+.content h3 {
+	font-size: 1.5rem; /* ~text-2xl */
+	font-weight: 600;
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+}
+
+/* Paragraph */
+.content p {
+	margin-bottom: 1.5rem;
+}
+
+/* Lists */
+.content ul,
+.content ol {
+	margin-bottom: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+.content ul {
+	list-style-type: disc;
+}
+
+.content ol {
+	list-style-type: decimal;
+}
+
+.content li {
+	margin-bottom: 0.5rem;
+}
+
+/* Blockquote */
+.content blockquote {
+	border-left: 4px solid #e5e7eb; /* gray-200 */
+	padding-left: 1rem;
+	color: #6b7280; /* gray-500 */
+	margin: 2rem 0;
+}
+
+/* Inline code */
+.content code {
+	background: #f3f4f6; /* gray-100 */
+	padding: 0.15rem 0.35rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+}
+
+/* Code block */
+.content pre {
+	background: #111827; /* gray-900 */
+	color: #e5e7eb; /* gray-200 */
+	padding: 1rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+	margin-bottom: 2rem;
+}

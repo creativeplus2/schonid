@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | Schon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/schonid/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+
+</head>
+
+<body class="content ">
+  <div class="container mx-auto">
+    <header class="container max-w-6xl mx-auto border-b border-gray-300">
+  <div class=" mx-auto  mt-2 flex justify-between">
+    <div class="font-bold text-xl"><img src="/schonid/assets/images/logo.gif" alt="Schon">
+    </div>
+
+    <nav class="space-x-6 flex items-center">
+      
+      <a href="/schonid/"
+        class="uppercase text-[85%] hover:text-[#9fc646] text-[#9fc646] font-semibold">
+        Home
+      </a>
+      
+      <a href="/schonid/products/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Products
+      </a>
+      
+      <a href="/schonid/company/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Company
+      </a>
+      
+      <a href="/schonid/clients/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Clients
+      </a>
+      
+      <a href="/schonid/maintenance/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Maintenance
+      </a>
+      
+      <a href="/schonid/contact-us/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Contact Us
+      </a>
+      
+    </nav>
+  </div>
+</header>
+    <section class="banner">
+    <div class="container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            
+                <a href="/schonid/products/caliper/" class="swiper-slide">
+                    <img src="/schonid/assets/images/Banner-Caliper.jpg" alt="" class="w-full " />
+                </a>
+            
+                <a href="/schonid/products/hi-bird/" class="swiper-slide">
+                    <img src="/schonid/assets/images/Banner-Hybrid.jpg" alt="" class="w-full " />
+                </a>
+            
+                <a href="/schonid/products/vision/" class="swiper-slide">
+                    <img src="/schonid/assets/images/Banner-Vision.jpg" alt="" class="w-full " />
+                </a>
+            
+                <a href="/schonid/products/form/" class="swiper-slide">
+                    <img src="/schonid/assets/images/Banner-Form.jpg" alt="" class="w-full " />
+                </a>
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container grid grid-cols-3 md:grid-cols-3 py-4">
+  <div class="border border-gray-300">
+  <a href="/schonid/products/">
+    <img src="assets/images/Chairs.jpg" />
+    </a>
+  </div>
+
+  <div class="border border-gray-300">
+    <a href="/schonid/products/">
+
+    <img src="assets/images/Desking Storage.jpg" />
+    </a>
+
+  </div>
+
+  <div class="border border-gray-300">
+    <a href="/schonid/products/">
+
+    <img src="assets/images/Workstations.jpg" />
+    </a>
+
+  </div>
+</section>
+
+
+
+    <footer class="container text-center">
+  © 2026 Schon
+</footer>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000, // 3 detik
+        disableOnInteraction: false
+      }
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      GLightbox({
+        selector: '.glightbox',
+        loop: true,
+        touchNavigation: true,
+        zoomable: true
+      });
+    });
+
+
+  </script>
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          status.className = "text-green-600";
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (data.errors) {
+              status.innerHTML = data.errors.map(e => e.message).join(", ");
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form.";
+            }
+            status.className = "text-red-600";
+          });
+        }
+      }).catch(() => {
+        status.innerHTML = "Oops! There was a problem submitting your form.";
+        status.className = "text-red-600";
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+  </script>
+
+</body>
+
+</html>

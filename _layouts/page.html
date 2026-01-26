@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class=" flex mt-4 gap-6">
+  <div class="w-3/4">
+    {{ content }}
+  </div>
+  <div class="w-1/4 border-t-[8px] border-[#9fc646] border-l-[1px] border-l-gray-300 pt-4 px-4">
+    {{ site.data.config.address | markdownify }}
+  </div>
+</div>

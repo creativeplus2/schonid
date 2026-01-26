@@ -1,0 +1,8 @@
+title: Schon
+description: Solusi Website & Audit IT
+url: 'https://creativeplus2.github.io'
+baseurl: '/schonid'
+collections:
+    products:
+        output: true
+        permalink: /products/:name/

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>company | Schon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/schonid/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+
+</head>
+
+<body class="content ">
+  <div class="container mx-auto">
+    <header class="container max-w-6xl mx-auto border-b border-gray-300">
+  <div class=" mx-auto  mt-2 flex justify-between">
+    <div class="font-bold text-xl"><img src="/schonid/assets/images/logo.gif" alt="Schon">
+    </div>
+
+    <nav class="space-x-6 flex items-center">
+      
+      <a href="/schonid/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Home
+      </a>
+      
+      <a href="/schonid/products/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Products
+      </a>
+      
+      <a href="/schonid/company/"
+        class="uppercase text-[85%] hover:text-[#9fc646] text-[#9fc646] font-semibold">
+        Company
+      </a>
+      
+      <a href="/schonid/clients/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Clients
+      </a>
+      
+      <a href="/schonid/maintenance/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Maintenance
+      </a>
+      
+      <a href="/schonid/contact-us/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Contact Us
+      </a>
+      
+    </nav>
+  </div>
+</header>
+    <div class=" flex mt-4 gap-6">
+  <div class="w-3/4">
+    <p>Schon provides end users wishing to have modern and contemporary office furniture for their commercial office spaces as well as interior designers and
+architects who are specifying executive office furniture for commercial office spaces. Our product portfolio and our ability to design custom office
+furniture provide a unique product mix that can satisfy any interior design concept and budget.</p>
+
+<p>Our products allow the users to have enormous flexible work spaces, maximum ergonomic, economic value and aesthetic modern design with commitment to
+long-lasting quality. After all, a good working environment not only inspires productivity but also great working atmosphere.</p>
+
+<p>So whether your project requires a unique look using workstations with various types of partitions, modern office furniture, executive desks, filing
+systems or seating solutions, we will work with you to create a solution that fits your budget and interior design concept.</p>
+
+<p>Our Responsibility</p>
+
+<p>Each of our product design and solution are socially and environmentally responsible. The components and parts we use are recyclable and free from
+hazardous substances to promote products that anyone can comfortably use. In addition, we are also committed to cut down on the use of wooden parts to
+preserve our earth’s deteriorating forests.</p>
+
+<p>What We Stand For</p>
+
+<p>Schon values Comfort, Space-Efficiency, Robustness, Versatility and Modernization. With intelligent design and custom specifications to meet the needs
+of every user’s requirements, it allows the user to create a progressive and professional work environment. This overall philosophy balances the
+pragmatic climate that exists in the global economy with a strong commitment to high quality and functional design.</p>
+
+<p>“How fast” is the question that is often asked by the user, which shows there is a need for speed. We believe in doing it fast and right…not just do
+it fast. We are committed to the provision of quality office furniture products to the fingertips of businesses according to their respective plans
+and schedules. While our office furniture products have refined designs and a high degree of style, we only offer commercial-grade products made to
+stand up to the daily demands of the modern workplace.</p>
+
+  </div>
+  <div class="w-1/4 border-t-[8px] border-[#9fc646] border-l-[1px] border-l-gray-300 pt-4 px-4">
+    <p><strong>PT. SCHON INDONESIA</strong><br /> 
+Jl. Ciliman No 1 Unit C1<br /> 
+Jakarta 10330</p>
+
+<p>Tel: 62-21-391 3238 (Hunting)<br />
+Fax: 62-21-391 2991<br />
+Email: info@schon-id.com</p>
+
+  </div>
+</div>
+
+
+    <footer class="container text-center">
+  © 2026 Schon
+</footer>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000, // 3 detik
+        disableOnInteraction: false
+      }
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      GLightbox({
+        selector: '.glightbox',
+        loop: true,
+        touchNavigation: true,
+        zoomable: true
+      });
+    });
+
+
+  </script>
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          status.className = "text-green-600";
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (data.errors) {
+              status.innerHTML = data.errors.map(e => e.message).join(", ");
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form.";
+            }
+            status.className = "text-red-600";
+          });
+        }
+      }).catch(() => {
+        status.innerHTML = "Oops! There was a problem submitting your form.";
+        status.className = "text-red-600";
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+  </script>
+
+</body>
+
+</html>

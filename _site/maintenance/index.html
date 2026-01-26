@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Maintenance | Schon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/schonid/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+
+</head>
+
+<body class="content ">
+  <div class="container mx-auto">
+    <header class="container max-w-6xl mx-auto border-b border-gray-300">
+  <div class=" mx-auto  mt-2 flex justify-between">
+    <div class="font-bold text-xl"><img src="/schonid/assets/images/logo.gif" alt="Schon">
+    </div>
+
+    <nav class="space-x-6 flex items-center">
+      
+      <a href="/schonid/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Home
+      </a>
+      
+      <a href="/schonid/products/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Products
+      </a>
+      
+      <a href="/schonid/company/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Company
+      </a>
+      
+      <a href="/schonid/clients/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Clients
+      </a>
+      
+      <a href="/schonid/maintenance/"
+        class="uppercase text-[85%] hover:text-[#9fc646] text-[#9fc646] font-semibold">
+        Maintenance
+      </a>
+      
+      <a href="/schonid/contact-us/"
+        class="uppercase text-[85%] hover:text-[#9fc646] ">
+        Contact Us
+      </a>
+      
+    </nav>
+  </div>
+</header>
+    <div class=" flex mt-4 gap-6">
+  <div class="w-3/4">
+    <p><strong>MAINTENANCE &amp; CARE Instructions</strong></p>
+
+<p><strong>Wood Surfaces Cleaning and Care Instructions</strong></p>
+
+<p>Cleaning Instructions</p>
+
+<p>Note: Always wipe with the grain.</p>
+
+<ul>
+  <li>Dust with a damp, soft cloth and dry the surface completely.</li>
+  <li>If needed, clean with a small amount of non-alkaline dish soap in warm water. Avoid waxes, solvents, ammonia, and other chemicals.</li>
+  <li>Frequent polishing is not recommended. If needed, use a no-wax liquid polish on a soft cloth. Immediately buff surface until dry. Before
+re-polishing, eliminate existing polish with a wax remover. If not removed, surface could appear streaky.</li>
+</ul>
+
+<p>Care Instructions</p>
+
+<ul>
+  <li>Immediately blot any liquids from the surface.</li>
+  <li>Avoid extreme heat, cold, or wide humidity variances. Prolonged sunlight could affect the color of the wood beneath the finish.</li>
+  <li>Use a desk pad to protect furniture from possible damage caused by pens and sharp objects.</li>
+  <li>If using a protective glass top, place felt or cork spacers under the glass to allow the wood to breathe.</li>
+  <li>Prolonged contact wtih plastic, vinyl, or rubber items may cause deterioration of the finish due to a chemical reaction. Place felt pads under these
+items to protect the wood surface.</li>
+</ul>
+
+<p>Laminate, Painted, and Metal Surfaces Cleaning and Care Instructions</p>
+
+<p>Cleaning Instructions</p>
+
+<ul>
+  <li>Clean with a mild soap solution. Avoid extreme heat, cold, or wide humidity variances.</li>
+</ul>
+
+<p>Chair Cleaning and Care Instructions</p>
+
+<ul>
+  <li>Finishes. For day-to-day cleaning, wipe with a damp cloth. For heavy-duty cleaning, use a commercial no-wax liquid polish intended for wood
+furniture; wipe with a clean dry cloth.</li>
+  <li>Fabrics. Light stains can be removed with textile cleaner or a sponge damped in water or a mild soapy solution.</li>
+  <li>Leathers. Wipe over stain with a cheese cloth soaked in a mild soap and warm water solution. Rinse soap film with a cheese cloth dampened in clean,
+warm water. Finish by wiping with a dry, soft cloth.</li>
+  <li>Pneumatic mechanisms. To ensure the proper function of the pneumatic height adjustment, the mechanism should be activated twice weekly. If the
+mechanism is left unused for a period of weeks, you may have difficulty adjusting the height of the chair.</li>
+</ul>
+
+  </div>
+  <div class="w-1/4 border-t-[8px] border-[#9fc646] border-l-[1px] border-l-gray-300 pt-4 px-4">
+    <p><strong>PT. SCHON INDONESIA</strong><br /> 
+Jl. Ciliman No 1 Unit C1<br /> 
+Jakarta 10330</p>
+
+<p>Tel: 62-21-391 3238 (Hunting)<br />
+Fax: 62-21-391 2991<br />
+Email: info@schon-id.com</p>
+
+  </div>
+</div>
+
+
+    <footer class="container text-center">
+  © 2026 Schon
+</footer>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000, // 3 detik
+        disableOnInteraction: false
+      }
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      GLightbox({
+        selector: '.glightbox',
+        loop: true,
+        touchNavigation: true,
+        zoomable: true
+      });
+    });
+
+
+  </script>
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          status.className = "text-green-600";
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (data.errors) {
+              status.innerHTML = data.errors.map(e => e.message).join(", ");
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form.";
+            }
+            status.className = "text-red-600";
+          });
+        }
+      }).catch(() => {
+        status.innerHTML = "Oops! There was a problem submitting your form.";
+        status.className = "text-red-600";
+      });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+  </script>
+
+</body>
+
+</html>

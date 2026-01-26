@@ -1,0 +1,22 @@
+address: |
+    **PT. SCHON INDONESIA**<br> 
+    Jl. Ciliman No 1 Unit C1<br> 
+    Jakarta 10330 
+
+    Tel: 62-21-391 3238 (Hunting)<br>
+    Fax: 62-21-391 2991<br>
+    Email: info@schon-id.com
+
+nav:
+    - title: Home
+      url: /
+    - title: Products
+      url: /products/
+    - title: Company
+      url: /company/
+    - title: Clients
+      url: /clients/
+    - title: Maintenance
+      url: /maintenance/
+    - title: Contact Us
+      url: /contact-us/

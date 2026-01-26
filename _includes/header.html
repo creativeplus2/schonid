@@ -1,0 +1,15 @@
+<header class="container max-w-6xl mx-auto border-b border-gray-300">
+  <div class=" mx-auto  mt-2 flex justify-between">
+    <div class="font-bold text-xl"><img src="{{ '/assets/images/logo.gif' | relative_url }}" alt="{{ site.title }}">
+    </div>
+
+    <nav class="space-x-6 flex items-center">
+      {% for item in site.data.config.nav %}
+      <a href="{{ item.url | relative_url }}"
+        class="uppercase text-[85%] hover:text-[#9fc646] {% if page.url == item.url %}text-[#9fc646] font-semibold{% endif %}">
+        {{ item.title }}
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
