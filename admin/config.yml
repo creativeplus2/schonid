@@ -56,7 +56,30 @@ collections:
           - label: Content
             name: body
             widget: markdown
+    - name: site_config
+      label: Site Configuration
+      files:
+          - name: config
+            label: Global Config
+            file: '_data/config.yaml'
+            fields:
+                - label: Address
+                  name: address
+                  widget: markdown
 
+                - label: Navigation
+                  name: nav
+                  widget: list
+                  fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: URL, name: url, widget: string }
+
+                - label: Product Categories
+                  name: product_categories
+                  widget: list
+                  fields:
+                      - { label: Key, name: key, widget: string }
+                      - { label: Title, name: title, widget: string }
     - name: pages
       label: Pages
       files:
