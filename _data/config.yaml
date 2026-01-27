@@ -1,30 +1,28 @@
-address: |
-    **PT. SCHON INDONESIA**<br> 
-    Jl. Ciliman No 1 Unit C1<br> 
-    Jakarta 10330 
+address: |-
+  **PT. SCHON INDONESIA**
+  Jl. Ciliman No 1 Unit C1
+  Jakarta 10330
 
-    Tel: 62-21-391 3238 (Hunting)<br>
-    Fax: 62-21-391 2991<br>
-    Email: info@schon-id.com
-
+  Tel: 62-21-391 3238 (Hunting)
+  Fax: 62-21-391 2991
+  [Email: info@schon-id.com](mailto: info@schon-id.com)
 nav:
-    - title: Home
-      url: /
-    - title: Products
-      url: /products/
-    - title: Company
-      url: /company/
-    - title: Clients
-      url: /clients/
-    - title: Maintenance
-      url: /maintenance/
-    - title: Contact Us
-      url: /contact-us/
-
+  - title: Home
+    url: /
+  - title: Products
+    url: /products/
+  - title: Company
+    url: /company/
+  - title: Clients
+    url: /clients/
+  - title: Maintenance
+    url: /maintenance/
+  - title: Contact Us
+    url: /contact-us/
 product_categories:
-    - key: workstation
-      title: Workstation
-    - key: chairs
-      title: Chairs
-    - key: desking-storage
-      title: Desking & Storage
+  - key: workstation
+    title: Workstation
+  - key: chairs
+    title: Chairs
+  - key: desking-storage
+    title: Desking & Storage
