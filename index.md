@@ -1,5 +1,6 @@
 ---
 layout: default
+cms: page
 title: Home
 banners:
     - image: /assets/images/Banner-Caliper.jpg

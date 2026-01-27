@@ -1,5 +1,6 @@
 ---
 layout: page
+cms: page
 title: company
 permalink: /company/
 ---

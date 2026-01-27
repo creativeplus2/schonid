@@ -82,10 +82,16 @@ collections:
                       - { label: Title, name: title, widget: string }
     - name: pages
       label: Pages
-      files:
-          - label: Home
-            name: home
-            file: index.md
-            fields:
-                - { label: Title, name: title, widget: string }
-                - { label: Body, name: body, widget: markdown }
+      folder: '/'
+      create: true
+      extension: md
+      slug: '{{slug}}'
+      summary: '{{title}}'
+      filter:
+          field: cms
+          value: page
+      fields:
+          - { label: CMS, name: cms, widget: hidden, default: page }
+          - { label: Layout, name: layout, widget: string, default: page }
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
