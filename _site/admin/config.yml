@@ -4,6 +4,7 @@ backend:
     branch: main
     base_url: https://patient-bread-6d0e.blue-hill-3f35.workers.dev/
     auth_endpoint: auth
+    open_authorization_popup: true
 
 media_folder: 'assets/images'
 public_folder: '/assets/images'
