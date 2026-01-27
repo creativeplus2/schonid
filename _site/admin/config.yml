@@ -2,6 +2,8 @@ backend:
     name: github
     repo: creativeplus2/schonid
     branch: main
+    base_url: https://patient-bread-6d0e.blue-hill-3f35.workers.dev/
+    auth_endpoint: auth
 
 media_folder: 'assets/images'
 public_folder: '/assets/images'
