@@ -4,7 +4,7 @@ title: Pax
 category: chairs
 banner: assets/images/Individual-Pax.jpg
 thumb: assets/images/PB-Pax.jpg
-
+order: 1
 gallery:
     - src: /assets/images/pax1.jpg
       alt: Pax Side

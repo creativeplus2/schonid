@@ -1,62 +1,67 @@
 ---
 layout: default
+
 ---
-<div class=" flex mt-4 gap-6">
-    <div class="w-3/4">
-        <img src="{{ page.banner | relative_url }}" class="w-full">
-
-        <div class="grid grid-cols-7 gap-2 mt-4">
-            {% for img in page.gallery %}
-            <a href="{{ img.src | relative_url }}" class="glightbox" data-gallery="products" data-title="{{ img.alt }}">
-                <img src="{{ img.src | relative_url }}" alt="{{ img.alt }}"
-                    class="object-cover border border-gray-300 hover:opacity-80 transition w-[100px] h-[100px]">
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="prose mt-4">
-            {{ content }}
-        </div>
+<div class=" flex flex-col mt-4 gap-6">
+    <button id="toggleSidebar" class="text-xs md:hidden border border-gray-300 px-4 py-2 uppercase font-bold
+         hover:bg-gray-100">
+        Select Product Category
+    </button>
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-40 opacity-0 pointer-events-none
+         transition-opacity duration-300 md:hidden">
     </div>
-    <div class="w-1/4 border-t-[8px] border-[#9fc646] border-l-[1px] border-l-gray-300 ">
-        <div class="">
-            <h4 class="pl-3 uppercase text-[#9fc646] font-bold py-1">Workstations</h4>
-            {% assign products = site.products | where: "category", "workstation" %}
+    <div class=" flex  gap-6">
 
-            {% for product in products %}
+        <div class="w-full md:w-3/4">
+            <img src="{{ page.banner | relative_url }}" class="w-full">
 
-            <a href="{{ product.url | relative_url }}"
-                class="text-[85%] uppercase border-t border-gray-300 flex pl-8 py-1 hover:text-[#9fc646]" {% if
-                page.url==product.url %} aria-current="page" {% endif %}>
-                {{ product.title }}
-            </a>
+            <div class="grid grid-cols-4  md:grid-cols-7 gap-2 mt-4">
+                {% for img in page.gallery %}
+                <a href="{{ img.src | relative_url }}" class="glightbox" data-gallery="products"
+                    data-title="{{ img.alt }}">
+                    <img src="{{ img.src | relative_url }}" alt="{{ img.alt }}"
+                        class="object-cover border border-gray-300 hover:opacity-80 transition w-full h-24 sm:h-24 lg:w-[100px] lg:h-[100px]">
+                </a>
+                {% endfor %}
+            </div>
+
+            <div class="prose mt-4">
+                {{ content }}
+            </div>
+        </div>
+
+        <div id="productSidebar" class="fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-50
+         transform translate-x-full transition-transform duration-300
+         md:static md:translate-x-0 md:w-1/4 md:h-auto
+         border-t-[8px] border-[#9fc646] border-l border-gray-300">
+
+            <!-- Header Mobile -->
+            <div class="md:hidden flex justify-between items-center px-4 py-3 border-b border-gray-300">
+                <span class="uppercase font-bold text-sm text-[#9fc646]"></span>
+                <button id="closeSidebar" class="text-2xl">✕</button>
+            </div>
+
+            {% for cat in site.data.config.product_categories %}
+            <div class="{% unless forloop.first %}border-t border-gray-300{% endunless %}">
+
+                <h4 class="pl-3 uppercase text-[#9fc646] font-bold py-2">
+                    {{ cat.title }}
+                </h4>
+
+                {% assign products = site.products | where: "category", cat.key | sort: "order" %}
+
+                {% for product in products %}
+                <a href="{{ product.url | relative_url }}" class="text-[85%] uppercase border-t border-gray-300 flex pl-8 py-2
+              hover:text-[#9fc646]
+       {% if page.url == product.url %} text-[#9fc646] font-bold {% endif %}" {% if page.url==product.url %}
+                    aria-current="page" {% endif %}>
+                    {{ product.title }}
+                </a>
+                {% endfor %}
+
+            </div>
             {% endfor %}
         </div>
-        <div class="border-t border-gray-300">
-            <h4 class="pl-3 uppercase text-[#9fc646] font-bold py-1">Chairs</h4>
-            {% assign products = site.products | where: "category", "chairs" %}
 
-            {% for product in products %}
-
-            <a href="{{ product.url | relative_url }}"
-                class="text-[85%] uppercase border-t border-gray-300 flex pl-8 py-1 hover:text-[#9fc646]" {% if
-                page.url==product.url %} aria-current="page" {% endif %}>
-                {{ product.title }}
-            </a>
-            {% endfor %}
-        </div>
-        <div class="border-t border-gray-300">
-            <h4 class="pl-3 uppercase text-[#9fc646] font-bold py-1">Desking & Storage</h4>
-            {% assign products = site.products | where: "category", "desking-storage" %}
-
-            {% for product in products %}
-
-            <a href="{{ product.url | relative_url }}"
-                class="text-[85%] uppercase border-t border-gray-300 flex pl-8 py-1 hover:text-[#9fc646]" {% if
-                page.url==product.url %} aria-current="page" {% endif %}>
-                {{ product.title }}
-            </a>
-            {% endfor %}
-        </div>
     </div>
 </div>

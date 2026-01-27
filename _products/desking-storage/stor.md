@@ -4,7 +4,7 @@ title: Stor
 category: desking-storage
 banner: assets/images/Individual-Stor.jpg
 thumb: assets/images/PB-Stor.jpg
-
+order: 4
 gallery:
 ---
 

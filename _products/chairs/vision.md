@@ -4,6 +4,7 @@ title: Vision
 category: chairs
 banner: assets/images/Individual-Vision.jpg
 thumb: assets/images/PB-Vision.jpg
+order: 3
 ---
 
 **VISION product infomation**

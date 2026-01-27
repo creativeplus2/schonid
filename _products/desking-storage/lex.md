@@ -4,7 +4,7 @@ title: Lex
 category: desking-storage
 banner: assets/images/Individual-LexEx.jpg
 thumb: assets/images/PB-LexEx.jpg
-
+order: 3
 gallery:
     - src: /assets/images/lex_executive1.jpg
       alt:

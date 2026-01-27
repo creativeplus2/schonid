@@ -4,6 +4,7 @@ title: Oslo
 category: chairs
 banner: assets/images/Individual-Oslo.jpg
 thumb: assets/images/PB-Oslo-2.jpg
+order: 5
 
 gallery:
     - src: /assets/images/olso1.jpg

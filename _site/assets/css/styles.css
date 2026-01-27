@@ -9,8 +9,11 @@
 }
 .content .container {
 	max-width: 1000px;
+	padding: 0 1rem;
 }
-
+.content .glightbox-clean .gslide-title {
+	margin-bottom: 0;!important;
+}
 a[aria-current='page'] {
 	color: white;
 	background-color: #9fc646;

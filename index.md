@@ -13,7 +13,6 @@ banners:
 ---
 
 <section class="banner">
-    <div class="container">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
             {% for banner in page.banners %}
@@ -27,10 +26,9 @@ banners:
             {% endfor %}
             </div>
         </div>
-    </div>
 </section>
 
-<section class="container grid grid-cols-3 md:grid-cols-3 py-4">
+<section class=" grid grid-cols-3 md:grid-cols-3 py-4">
   <div class="border border-gray-300">
   <a href="{{ '/products/' | relative_url}}" >
     <img src="assets/images/Chairs.jpg" >

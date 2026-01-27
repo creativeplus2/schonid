@@ -4,7 +4,7 @@ title: Bild
 category: workstation
 banner: assets/images/Individual-Bild.jpg
 thumb: assets/images/PB-Bild.jpg
-
+order: 6
 gallery:
     - src: /assets/images/bild1.jpg
       alt: Bild Cluster of 8

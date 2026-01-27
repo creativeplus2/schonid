@@ -4,6 +4,7 @@ title: Form
 category: desking-storage
 banner: assets/images/Individual-Form.jpg
 thumb: assets/images/PB-Form.jpg
+order: 2
 ---
 
 **FORM product infomation**

@@ -4,7 +4,7 @@ title: Caliper
 category: workstation
 banner: assets/images/Individual-Caliper.jpg
 thumb: assets/images/PB-Caliper.jpg
-
+order: 5
 gallery:
     - src: /assets/images/caliper1.jpg
       alt: cluster 4 u formation

@@ -4,6 +4,7 @@ title: Hi-Bird
 category: workstation
 banner: assets/images/Individual-HiBrid.jpg
 thumb: assets/images/Hi-BRID.jpg
+order: 1
 ---
 
 **Hi-BRID product infomation**

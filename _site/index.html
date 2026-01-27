@@ -14,12 +14,15 @@
 
 <body class="content ">
   <div class="container mx-auto">
-    <header class="container max-w-6xl mx-auto border-b border-gray-300">
-  <div class=" mx-auto  mt-2 flex justify-between">
-    <div class="font-bold text-xl"><img src="/schonid/assets/images/logo.gif" alt="Schon">
+    <header class=" w-full border-b border-gray-300">
+  <div class="mt-2 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="font-bold text-xl">
+      <img src="/schonid/assets/images/logo.gif" alt="Schon">
     </div>
 
-    <nav class="space-x-6 flex items-center">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 items-center">
       
       <a href="/schonid/"
         class="uppercase text-[85%] hover:text-[#9fc646] text-[#9fc646] font-semibold">
@@ -52,10 +55,66 @@
       </a>
       
     </nav>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
   </div>
 </header>
+
+<div id="mobileMenu" class="container mt-2 fixed inset-0 bg-white z-50 flex flex-col
+         opacity-0 pointer-events-none transition-opacity duration-300">
+
+  <!-- Top Bar -->
+  <div class="w-full  flex justify-between items-center border-b border-gray-300">
+    <!-- Logo (Left) -->
+    <div class="font-bold text-xl">
+      <img src="/schonid/assets/images/logo.gif" alt="Schon">
+    </div>
+
+    <!-- Close Button (Right) -->
+    <button id="closeMenu" class="text-2xl leading-none">
+      ✕
+    </button>
+  </div>
+
+  <!-- Navigation (Center) -->
+  <nav class="flex-1 flex flex-col justify-center items-center space-y-6 text-center">
+    
+    <a href="/schonid/" class="block text-xl uppercase hover:text-[#9fc646]
+      text-[#9fc646] font-semibold">
+      Home
+    </a>
+    
+    <a href="/schonid/products/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Products
+    </a>
+    
+    <a href="/schonid/company/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Company
+    </a>
+    
+    <a href="/schonid/clients/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Clients
+    </a>
+    
+    <a href="/schonid/maintenance/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Maintenance
+    </a>
+    
+    <a href="/schonid/contact-us/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Contact Us
+    </a>
+    
+  </nav>
+</div>
     <section class="banner">
-    <div class="container">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
             
@@ -77,10 +136,9 @@
             
             </div>
         </div>
-    </div>
 </section>
 
-<section class="container grid grid-cols-3 md:grid-cols-3 py-4">
+<section class=" grid grid-cols-3 md:grid-cols-3 py-4">
   <div class="border border-gray-300">
   <a href="/schonid/products/">
     <img src="assets/images/Chairs.jpg" />
@@ -168,6 +226,42 @@
     }
 
     form.addEventListener("submit", handleSubmit);
+  </script>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100');
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+    });
+  </script>
+  <script>
+    const openBtn = document.getElementById('toggleSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+    const sidebar = document.getElementById('productSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      sidebar.classList.remove('translate-x-full');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
   </script>
 
 </body>

@@ -4,7 +4,7 @@ title: Tile 90
 category: workstation
 banner: assets/images/Individual-HiBrid.jpg
 thumb: assets/images/innoTile.jpg
-
+order: 2
 gallery:
     - src: /assets/images/27.jpg
       alt: Hi-Bird workstation view

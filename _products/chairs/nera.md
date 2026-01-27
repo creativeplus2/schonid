@@ -4,6 +4,7 @@ title: Nera
 category: chairs
 banner: assets/images/Individual-Nera.jpg
 thumb: assets/images/PB-Nera.jpg
+order: 4
 
 gallery:
     - src: /assets/images/nera1.jpg

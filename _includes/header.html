@@ -1,9 +1,12 @@
-<header class="container max-w-6xl mx-auto border-b border-gray-300">
-  <div class=" mx-auto  mt-2 flex justify-between">
-    <div class="font-bold text-xl"><img src="{{ '/assets/images/logo.gif' | relative_url }}" alt="{{ site.title }}">
+<header class=" w-full border-b border-gray-300">
+  <div class="mt-2 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="font-bold text-xl">
+      <img src="{{ '/assets/images/logo.gif' | relative_url }}" alt="{{ site.title }}">
     </div>
 
-    <nav class="space-x-6 flex items-center">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 items-center">
       {% for item in site.data.config.nav %}
       <a href="{{ item.url | relative_url }}"
         class="uppercase text-[85%] hover:text-[#9fc646] {% if page.url == item.url %}text-[#9fc646] font-semibold{% endif %}">
@@ -11,5 +14,37 @@
       </a>
       {% endfor %}
     </nav>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
   </div>
 </header>
+
+<div id="mobileMenu" class="container mt-2 fixed inset-0 bg-white z-50 flex flex-col
+         opacity-0 pointer-events-none transition-opacity duration-300">
+
+  <!-- Top Bar -->
+  <div class="w-full  flex justify-between items-center border-b border-gray-300">
+    <!-- Logo (Left) -->
+    <div class="font-bold text-xl">
+      <img src="{{ '/assets/images/logo.gif' | relative_url }}" alt="{{ site.title }}">
+    </div>
+
+    <!-- Close Button (Right) -->
+    <button id="closeMenu" class="text-2xl leading-none">
+      ✕
+    </button>
+  </div>
+
+  <!-- Navigation (Center) -->
+  <nav class="flex-1 flex flex-col justify-center items-center space-y-6 text-center">
+    {% for item in site.data.config.nav %}
+    <a href="{{ item.url | relative_url }}" class="block text-xl uppercase hover:text-[#9fc646]
+      {% if page.url == item.url %}text-[#9fc646] font-semibold{% endif %}">
+      {{ item.title }}
+    </a>
+    {% endfor %}
+  </nav>
+</div>

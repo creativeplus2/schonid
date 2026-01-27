@@ -4,6 +4,7 @@ title: FIN 30
 category: workstation
 banner: assets/images/Individual-Fin30.jpg
 thumb: assets/images/Fin30.jpg
+order: 4
 ---
 
 **FIN 30 product infomation**

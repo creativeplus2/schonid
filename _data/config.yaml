@@ -20,3 +20,11 @@ nav:
       url: /maintenance/
     - title: Contact Us
       url: /contact-us/
+
+product_categories:
+    - key: workstation
+      title: Workstation
+    - key: chairs
+      title: Chairs
+    - key: desking-storage
+      title: Desking & Storage

@@ -4,6 +4,7 @@ title: Icon
 category: desking-storage
 banner: assets/images/Individual-Icon.jpg
 thumb: assets/images/PB-Icon.jpg
+order: 1
 
 gallery:
     - src: /assets/images/icon1.jpg

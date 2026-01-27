@@ -14,12 +14,15 @@
 
 <body class="content ">
   <div class="container mx-auto">
-    <header class="container max-w-6xl mx-auto border-b border-gray-300">
-  <div class=" mx-auto  mt-2 flex justify-between">
-    <div class="font-bold text-xl"><img src="/schonid/assets/images/logo.gif" alt="Schon">
+    <header class=" w-full border-b border-gray-300">
+  <div class="mt-2 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="font-bold text-xl">
+      <img src="/schonid/assets/images/logo.gif" alt="Schon">
     </div>
 
-    <nav class="space-x-6 flex items-center">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 items-center">
       
       <a href="/schonid/"
         class="uppercase text-[85%] hover:text-[#9fc646] ">
@@ -52,49 +55,255 @@
       </a>
       
     </nav>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menuBtn" class="md:hidden text-3xl">
+      ☰
+    </button>
   </div>
 </header>
-    <div class="grid grid-cols-3 gap-4">
-<div class="border border-gray-300 mt-6 p-3">
-<h4 class="uppercase font-bold">Workstation</h4>
-<hr class="border-t border-gray-300 mt-3 mb-1.5" />
 
+<div id="mobileMenu" class="container mt-2 fixed inset-0 bg-white z-50 flex flex-col
+         opacity-0 pointer-events-none transition-opacity duration-300">
 
- <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/bild/">
-<img src="/schonid/assets/images/PB-Bild.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/caliper/">
-<img src="/schonid/assets/images/PB-Caliper.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/fin-30/">
-<img src="/schonid/assets/images/Fin30.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/hi-bird/">
-<img src="/schonid/assets/images/Hi-BRID.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/link-50/">
-<img src="/schonid/assets/images/Link50.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/tile-90/">
-<img src="/schonid/assets/images/innoTile.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" /> 
+  <!-- Top Bar -->
+  <div class="w-full  flex justify-between items-center border-b border-gray-300">
+    <!-- Logo (Left) -->
+    <div class="font-bold text-xl">
+      <img src="/schonid/assets/images/logo.gif" alt="Schon">
+    </div>
 
+    <!-- Close Button (Right) -->
+    <button id="closeMenu" class="text-2xl leading-none">
+      ✕
+    </button>
+  </div>
+
+  <!-- Navigation (Center) -->
+  <nav class="flex-1 flex flex-col justify-center items-center space-y-6 text-center">
+    
+    <a href="/schonid/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Home
+    </a>
+    
+    <a href="/schonid/products/" class="block text-xl uppercase hover:text-[#9fc646]
+      text-[#9fc646] font-semibold">
+      Products
+    </a>
+    
+    <a href="/schonid/company/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Company
+    </a>
+    
+    <a href="/schonid/clients/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Clients
+    </a>
+    
+    <a href="/schonid/maintenance/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Maintenance
+    </a>
+    
+    <a href="/schonid/contact-us/" class="block text-xl uppercase hover:text-[#9fc646]
+      ">
+      Contact Us
+    </a>
+    
+  </nav>
 </div>
-<div class="border border-gray-300 mt-6 p-3">
-<h4 class="uppercase font-bold">chairs</h4>
-<hr class="border-t border-gray-300 mt-3 mb-1.5" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
 
- <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/nera/">
-<img src="/schonid/assets/images/PB-Nera.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/oslo/">
-<img src="/schonid/assets/images/PB-Oslo-2.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/pax/">
-<img src="/schonid/assets/images/PB-Pax.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/vault/">
-<img src="/schonid/assets/images/PB-Vault.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/vision/">
-<img src="/schonid/assets/images/PB-Vision.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" /> 
 
-</div>
-<div class="border border-gray-300 mt-6 p-3">
-<h4 class="uppercase font-bold">Desking &amp; Storage</h4>
-<hr class="border-t border-gray-300 mt-3 mb-1.5" />
+  <div class="border border-gray-300 mt-6 p-3">
+
+    <h4 class="uppercase font-bold text-sm sm:text-base">
+      Workstation
+    </h4>
+
+    <hr class="border-t border-gray-300 mt-3 mb-1.5" />
+
+    
+
+    
+      <a href="/schonid/products/hi-bird/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/Hi-BRID.jpg" alt="Hi-Bird" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/tile-90/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/innoTile.jpg" alt="Tile 90" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/link-50/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/Link50.jpg" alt="Link 50" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/fin-30/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/Fin30.jpg" alt="FIN 30" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/caliper/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Caliper.jpg" alt="Caliper" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/bild/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Bild.jpg" alt="Bild" class="w-full object-contain" />
+      </a>
+
+      
+    
+
+  </div>
 
 
- <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/custom/">
-<img src="/schonid/assets/images/PB-Custom.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/form/">
-<img src="/schonid/assets/images/PB-Form.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/icon/">
-<img src="/schonid/assets/images/PB-Icon.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/lex/">
-<img src="/schonid/assets/images/PB-LexEx.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" />  <a class="border border-white flex p-1.5 hover:border-[#9fc646] hover:border" href="/schonid/products/stor/">
-<img src="/schonid/assets/images/PB-Stor.jpg" class="w-full" /> </a> <hr class="border-t border-gray-300 my-1.5" /> 
 
-</div>
+  <div class="border border-gray-300 mt-6 p-3">
+
+    <h4 class="uppercase font-bold text-sm sm:text-base">
+      Chairs
+    </h4>
+
+    <hr class="border-t border-gray-300 mt-3 mb-1.5" />
+
+    
+
+    
+      <a href="/schonid/products/pax/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Pax.jpg" alt="Pax" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/vault/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Vault.jpg" alt="Vault" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/vision/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Vision.jpg" alt="Vision" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/nera/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Nera.jpg" alt="Nera" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/oslo/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Oslo-2.jpg" alt="Oslo" class="w-full object-contain" />
+      </a>
+
+      
+    
+
+  </div>
+
+
+
+  <div class="border border-gray-300 mt-6 p-3">
+
+    <h4 class="uppercase font-bold text-sm sm:text-base">
+      Desking &amp; Storage
+    </h4>
+
+    <hr class="border-t border-gray-300 mt-3 mb-1.5" />
+
+    
+
+    
+      <a href="/schonid/products/icon/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Icon.jpg" alt="Icon" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/form/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Form.jpg" alt="Form" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/lex/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-LexEx.jpg" alt="Lex" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/stor/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Stor.jpg" alt="Stor" class="w-full object-contain" />
+      </a>
+
+      
+        <hr class="border-t border-gray-300 my-1.5" />
+      
+    
+      <a href="/schonid/products/custom/" class="border border-white flex p-1.5 hover:border-[#9fc646]
+               transition-colors duration-200">
+        <img src="/schonid/assets/images/PB-Custom.jpg" alt="Custom" class="w-full object-contain" />
+      </a>
+
+      
+    
+
+  </div>
+
+
+
 </div>
 
 
@@ -161,6 +370,42 @@
     }
 
     form.addEventListener("submit", handleSubmit);
+  </script>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenu = document.getElementById('closeMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100');
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+    });
+  </script>
+  <script>
+    const openBtn = document.getElementById('toggleSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+    const sidebar = document.getElementById('productSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      sidebar.classList.remove('translate-x-full');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
   </script>
 
 </body>

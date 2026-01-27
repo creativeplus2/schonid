@@ -4,7 +4,7 @@ title: Custom
 category: desking-storage
 banner: assets/images/Individual-Custom.jpg
 thumb: assets/images/PB-Custom.jpg
-
+order: 5
 gallery:
 ---
 

@@ -4,7 +4,7 @@ title: Vault
 category: chairs
 banner: assets/images/Individual-Vault.jpg
 thumb: assets/images/PB-Vault.jpg
-
+order: 2
 gallery:
     - src: /assets/images/vault1.jpg
       alt: Vault Frontview
