@@ -28,7 +28,7 @@ collections:
             options:
                 - workstation
                 - desking-storage
-                - main
+                - chairs
 
           - label: Order
             name: order
