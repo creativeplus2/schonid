@@ -2,7 +2,7 @@
 layout: product
 title: Link 50
 category: workstation
-banner: assets/images/Individual-Link50.jpg
+banner: assets/images/Individual-LINK50.jpg
 thumb: assets/images/Link50.jpg
 order: 3
 ---

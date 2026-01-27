@@ -2,7 +2,7 @@
 layout: product
 title: FIN 30
 category: workstation
-banner: assets/images/Individual-Fin30.jpg
+banner: assets/images/Individual-FIN30.jpg
 thumb: assets/images/Fin30.jpg
 order: 4
 ---
