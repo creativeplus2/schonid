@@ -2,22 +2,30 @@ backend:
     name: github
     repo: creativeplus2/schonid
     branch: main
-    base_url: https://patient-bread-6d0e.blue-hill-3f35.workers.dev/
-    auth_endpoint: auth
-    open_authorization_popup: true
+    auth_type: pat # 👈 penting!
 
-media_folder: 'assets/images'
-public_folder: '/assets/images'
+media_folder: 'assets/uploads'
+public_folder: '/assets/uploads'
 
 collections:
-    - name: 'products'
-      label: 'Products'
+    - name: products
+      label: Products
       folder: '_products'
       create: true
-      slug: '{{order}}-{{slug}}'
+      slug: '{{slug}}'
       fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Order', name: 'order', widget: 'number' }
-          - { label: 'Category', name: 'category', widget: 'select', options: ['cat1', 'cat2', 'cat3'] }
-          - { label: 'Thumbnail', name: 'thumb', widget: 'image' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: Title, name: title, widget: string }
+          - { label: Order, name: order, widget: number }
+          - { label: Category, name: category, widget: string }
+          - { label: Thumbnail, name: thumb, widget: image }
+          - { label: Body, name: body, widget: markdown }
+
+    - name: pages
+      label: Pages
+      files:
+          - label: Home
+            name: home
+            file: index.md
+            fields:
+                - { label: Title, name: title, widget: string }
+                - { label: Body, name: body, widget: markdown }
