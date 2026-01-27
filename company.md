@@ -1,6 +1,6 @@
 ---
-layout: page
 cms: page
+layout: page
 title: company
 permalink: /company/
 ---
@@ -15,13 +15,13 @@ long-lasting quality. After all, a good working environment not only inspires pr
 So whether your project requires a unique look using workstations with various types of partitions, modern office furniture, executive desks, filing
 systems or seating solutions, we will work with you to create a solution that fits your budget and interior design concept.
 
-Our Responsibility
+**Our Responsibility**
 
 Each of our product design and solution are socially and environmentally responsible. The components and parts we use are recyclable and free from
 hazardous substances to promote products that anyone can comfortably use. In addition, we are also committed to cut down on the use of wooden parts to
 preserve our earth's deteriorating forests.
 
-What We Stand For
+**What We Stand For**
 
 Schon values Comfort, Space-Efficiency, Robustness, Versatility and Modernization. With intelligent design and custom specifications to meet the needs
 of every user's requirements, it allows the user to create a progressive and professional work environment. This overall philosophy balances the
