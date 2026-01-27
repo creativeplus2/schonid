@@ -1,0 +1,20 @@
+backend:
+    name: github
+    repo: creativeplus2/schonid
+    branch: main
+
+media_folder: 'assets/images'
+public_folder: '/assets/images'
+
+collections:
+    - name: 'products'
+      label: 'Products'
+      folder: '_products'
+      create: true
+      slug: '{{order}}-{{slug}}'
+      fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Order', name: 'order', widget: 'number' }
+          - { label: 'Category', name: 'category', widget: 'select', options: ['cat1', 'cat2', 'cat3'] }
+          - { label: 'Thumbnail', name: 'thumb', widget: 'image' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
