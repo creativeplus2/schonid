@@ -4,20 +4,23 @@ backend:
     branch: main
     auth_type: pat # 👈 penting!
 
-media_folder: 'assets/uploads'
-public_folder: '/assets/uploads'
+media_folder: 'assets/images'
+public_folder: '/assets/images'
 
 collections:
     - name: products
       label: Products
       folder: '_products'
       create: true
-      slug: '{{slug}}'
       fields:
+          - label: Category
+            name: category
+            widget: select
+            options:
+                - desking-storage
+                - workstation
+                - main
           - { label: Title, name: title, widget: string }
-          - { label: Order, name: order, widget: number }
-          - { label: Category, name: category, widget: string }
-          - { label: Thumbnail, name: thumb, widget: image }
           - { label: Body, name: body, widget: markdown }
 
     - name: pages
