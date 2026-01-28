@@ -96,3 +96,35 @@ collections:
           - { label: Layout, name: layout, widget: string, default: page }
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
+          - label: Page Sections
+            name: sections
+            widget: list
+            collapsed: true
+            summary: '{{type}}'
+            hint: 'Susun konten halaman dari atas ke bawah'
+            fields:
+                - label: Section Type
+                  name: type
+                  widget: select
+                  options:
+                      - banner_slider
+                      - category_grid
+                      - product_list
+                      - contact_form
+                - label: Banners
+                  name: banners
+                  widget: list
+                  required: false
+                  collapsed: true
+                  fields:
+                      - { label: Image, name: image, widget: image }
+                      - { label: Link URL, name: url, widget: string }
+                - label: Grid Items
+                  name: items
+                  widget: list
+                  required: false
+                  collapsed: true
+                  hint: 'Disarankan 3 item'
+                  fields:
+                      - { label: Image, name: image, widget: image }
+                      - { label: Link URL, name: url, widget: string }

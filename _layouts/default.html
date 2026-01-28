@@ -25,6 +25,23 @@
 <body class="content ">
   <div class="container mx-auto">
     {% include header.html %}
+    {% for section in page.sections %}
+    {% case section.type %}
+
+    {% when "banner_slider" %}
+    {% include sections/banner-slider.html banners=section.banners %}
+
+    {% when "category_grid" %}
+    {% include sections/category-grid.html items=section.items %}
+
+    {% when "product_list" %}
+    {% include sections/product-list.html %}
+
+    {% when "contact_form" %}
+    {% include sections/contact-form.html %}
+
+    {% endcase %}
+    {% endfor %}
     {{ content }}
 
 

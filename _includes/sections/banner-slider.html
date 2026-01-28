@@ -1,0 +1,11 @@
+<section class="banner">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for banner in include.banners %}
+            <a href="{{ banner.url | relative_url }}" class="swiper-slide">
+                <img src="{{ banner.image | relative_url }}" class="w-full">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

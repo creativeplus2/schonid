@@ -1,0 +1,9 @@
+<section class="grid grid-cols-1 md:grid-cols-3 py-4">
+    {% for item in include.items %}
+    <div class="border border-gray-300">
+        <a href="{{ item.url | relative_url }}">
+            <img src="{{ item.image | relative_url }}">
+        </a>
+    </div>
+    {% endfor %}
+</section>
