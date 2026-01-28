@@ -6,6 +6,9 @@ backend:
 
 media_folder: 'assets/images'
 public_folder: '/assets/images'
+logo:
+    src: /assets/images/logo.gif
+    show_in_header: true
 
 collections:
     # =========================
