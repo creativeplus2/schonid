@@ -2,12 +2,15 @@ backend:
     name: github
     repo: creativeplus2/schonid
     branch: main
-    auth_type: pat # 👈 penting!
+    auth_type: pat # Gunakan Personal Access Token GitHub
 
 media_folder: 'assets/images'
 public_folder: '/assets/images'
 
 collections:
+    # =========================
+    # PRODUCTS
+    # =========================
     - name: products
       label: Products
       folder: '_products'
@@ -15,62 +18,81 @@ collections:
       nested: true
       slug: '{{title | slugify}}'
       summary: '{{title}} — {{category}}'
+      hint: 'Manajemen produk: detail, galeri, dan urutan tampil'
+
       fields:
           - { label: Layout, name: layout, widget: hidden, default: product }
 
           - label: Title
             name: title
             widget: string
+            hint: 'Nama produk yang ditampilkan di website'
 
           - label: Category
             name: category
             widget: select
+            hint: '⚠️ Harus sesuai kategori di Site Configuration'
             options:
                 - workstation
                 - desking-storage
                 - chairs
 
-          - label: Order
+          - label: Display Order
             name: order
             widget: number
             value_type: int
             min: 1
+            hint: 'Angka kecil tampil lebih dulu'
 
           - label: Banner Image
             name: banner
             widget: image
             media_folder: '/assets/images'
+            hint: 'Gambar utama di halaman detail produk'
 
           - label: Thumbnail Image
             name: thumb
             widget: image
             media_folder: '/assets/images'
+            hint: 'Thumbnail untuk listing produk'
 
           - label: Gallery
             name: gallery
             widget: list
             required: false
+            collapsed: true
+            hint: 'Opsional — tampil sebagai galeri slider'
             fields:
                 - { label: Image, name: src, widget: image }
                 - { label: Alt Text, name: alt, widget: string, required: false }
 
-          - label: Content
+          - label: Product Description
             name: body
             widget: markdown
+            hint: 'Deskripsi utama produk (markdown supported)'
+
+    # =========================
+    # GLOBAL SITE CONFIG
+    # =========================
     - name: site_config
       label: Site Configuration
+      hint: 'Pengaturan global website'
       files:
           - name: config
             label: Global Config
             file: '_data/config.yaml'
+
             fields:
-                - label: Address
+                - label: Company Address
                   name: address
                   widget: markdown
+                  hint: 'Alamat & kontak perusahaan (boleh pakai HTML / Markdown)'
 
-                - label: Navigation
+                - label: Navigation Menu
                   name: nav
                   widget: list
+                  collapsed: true
+                  hint: 'Menu utama website'
                   fields:
                       - { label: Title, name: title, widget: string }
                       - { label: URL, name: url, widget: string }
@@ -78,9 +100,15 @@ collections:
                 - label: Product Categories
                   name: product_categories
                   widget: list
+                  collapsed: true
+                  hint: '⚠️ Key harus sama dengan category di Product'
                   fields:
                       - { label: Key, name: key, widget: string }
                       - { label: Title, name: title, widget: string }
+
+    # =========================
+    # PAGES
+    # =========================
     - name: pages
       label: Pages
       folder: '.'
@@ -91,17 +119,33 @@ collections:
       filter:
           field: cms
           value: page
+      hint: 'Halaman statis seperti Home, Products, Contact'
+
       fields:
-          - { label: CMS, name: cms, widget: hidden, default: page }
-          - { label: Layout, name: layout, widget: string, default: page }
-          - { label: Title, name: title, widget: string }
-          - { label: Body, name: body, widget: markdown }
+          - { label: CMS Flag, name: cms, widget: hidden, default: page }
+
+          - label: Layout
+            name: layout
+            widget: string
+            default: page
+            hint: 'Gunakan layout page kecuali ada kebutuhan khusus'
+
+          - label: Page Title
+            name: title
+            widget: string
+
+          - label: Body Content
+            name: body
+            widget: markdown
+            required: false
+            hint: 'Konten utama halaman (opsional jika pakai section)'
+
           - label: Page Sections
             name: sections
             widget: list
             collapsed: true
             summary: '{{type}}'
-            hint: 'Susun konten halaman dari atas ke bawah'
+            hint: 'Susun section dari atas ke bawah'
             fields:
                 - label: Section Type
                   name: type
@@ -111,20 +155,24 @@ collections:
                       - category_grid
                       - product_list
                       - contact_form
-                - label: Banners
+                  hint: 'Jenis section yang akan dirender'
+
+                - label: Banner Slider
                   name: banners
                   widget: list
                   required: false
                   collapsed: true
+                  hint: 'Hanya dipakai untuk banner_slider'
                   fields:
                       - { label: Image, name: image, widget: image }
                       - { label: Link URL, name: url, widget: string }
-                - label: Grid Items
+
+                - label: Category Grid Items
                   name: items
                   widget: list
                   required: false
                   collapsed: true
-                  hint: 'Disarankan 3 item'
+                  hint: 'Hanya dipakai untuk category_grid (disarankan 3 item)'
                   fields:
                       - { label: Image, name: image, widget: image }
                       - { label: Link URL, name: url, widget: string }
