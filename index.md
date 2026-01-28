@@ -9,6 +9,10 @@ sections:
             url: /products/caliper/
           - image: /assets/images/Banner-Hybrid.jpg
             url: /products/hi-bird/
+          - image: /assets/images/Banner-Vision.jpg
+            url: /products/vision/
+          - image: /assets/images/Banner-Form.jpg
+            url: /products/form/
 
     - type: category_grid
       items:
