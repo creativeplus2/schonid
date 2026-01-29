@@ -7,6 +7,35 @@
     <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </head>
 
-<body></body>
+<body>
+    <script>
+        (function () {
+            const observer = new MutationObserver(() => {
+                document.querySelectorAll('[data-key-path^="sections."]').forEach(section => {
+                    const typeField = section.querySelector(
+                        '[data-key-path$=".type"] [aria-checked="true"]'
+                    );
+
+                    if (!typeField) return;
+
+                    const selectedType = typeField.getAttribute('data-value');
+
+                    section.querySelectorAll('[data-key-path$=".banners"]').forEach(el => {
+                        el.style.display = selectedType === 'banner_slider' ? '' : 'none';
+                    });
+
+                    section.querySelectorAll('[data-key-path$=".items"]').forEach(el => {
+                        el.style.display = selectedType === 'category_grid' ? '' : 'none';
+                    });
+                });
+            });
+
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        })();
+    </script>
+</body>
 
 </html>
