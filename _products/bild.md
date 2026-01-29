@@ -18,7 +18,7 @@ gallery:
     alt: null
 ---
 
-**BILD product infomation 123**
+**BILD product infomation**
 
 - Slim 60mm ends combined with 16mm thin panels provides the balance of both form and function without the bulkiness of legacy designs.
 - Our systems can be dismantled, repositioned and rebuilt within minutes, enabling easy reconfiguration or relocation of project teams or departments.
